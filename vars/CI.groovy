@@ -1,4 +1,4 @@
-def call(name, value) {
+def call() {
 pipeline {
     agent any
     // options {
@@ -6,7 +6,7 @@ pipeline {
     //     }
     parameters {
 	    string(name: 'hello', defaultValue: 'divya', description: 'name is divya') 
-            booleanParam(name: 'colour-black', defaultValue: value)
+            booleanParam(name: 'colour-black', defaultValue: 'true')
         }
     stages {
 		
