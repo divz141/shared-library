@@ -1,12 +1,12 @@
-def call() {
+def call(name, value) {
 pipeline {
     agent any
     // options {
     //     timeout(time: 1, unit: 'MINUTES') 
     //     }
     parameters {
-	    string(name: 'hello', defaultValue: 'divya', description: 'name is divya') 
-            booleanParam(name: 'colour-black', defaultValue: 'true')
+	    string(name: 'hello', defaultValue: name, description: 'name is divya') 
+            booleanParam(name: 'colour-black', defaultValue: value)
         }
     stages {
 		
