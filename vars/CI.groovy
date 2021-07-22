@@ -5,9 +5,8 @@ pipeline {
     //     timeout(time: 1, unit: 'MINUTES') 
     //     }
     parameters {
-            //choice(name: 'Colour', choices: ['blue', 'green','black','white'], description: 'select colour')
+	    string(name: 'hello', defaultValue: 'divya', description: 'name is divya') 
             booleanParam(name: 'colour-black', defaultValue: value)
-            string(name: 'hello', defaultValue: name, description: 'name is divya')
         }
     stages {
 		
