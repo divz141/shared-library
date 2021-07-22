@@ -1,13 +1,13 @@
-def call() {
+def call(name, value) {
 pipeline {
     agent any
     // options {
     //     timeout(time: 1, unit: 'MINUTES') 
     //     }
     parameters {
-            choice(name: 'Colour', choices: ['blue', 'green','black','white'], description: 'select colour')
-            booleanParam(name: 'colour-black', defaultValue: true, description: 'check if colour is not black')
-            string(name: 'hello', defaultValue: 'divya', description: 'name is divya')
+            //choice(name: 'Colour', choices: ['blue', 'green','black','white'], description: 'select colour')
+            booleanParam(name: 'colour-black', defaultValue: value)
+            string(name: 'hello', defaultValue: name, description: 'name is divya')
         }
     stages {
 		
